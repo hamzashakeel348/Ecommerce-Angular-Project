@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="wrap_container">
+    <div *ngFor="let product of products" class="single_product">
+      <img style="width: 15em; margin-bottom: -7em" src="{{ product.url }}" />
+      <span style="margin-top: -6em">
+        <h2>{{ product.text1 }}</h2>
+        <p style="color: gray">{{ product.text2 }}</p>
+        <h3>{{ product.text3 }}</h3>
+      </span>
+    </div>
+  </div>
+  <br />
+  <br />
+  <h1>Add Product</h1>
+  <form #f="ngForm" (ngSubmit)="data(f)" style="border: gray">
+    <div class="single_row">
+      <div class="input_style">
+        <input
+          type="text"
+          required
+          ngModel
+          name="text1"
+          name="text1"
+          class="input"
+          id="text1"
+          placeholder="Enter Product Name"
+        />
+      </div>
+      <div class="input_style_left">
+        <input
+          type="text"
+          required
+          ngModel
+          name="text2"
+          name="text2"
+          class="input"
+          id="text2"
+          placeholder="Enter Collection Name"
+        />
+      </div>
+    </div>
+    <div class="single_row">
+      <div class="input_style">
+        <input
+          type="text"
+          required
+          ngModel
+          name="text3"
+          name="text3"
+          class="input"
+          id="text3"
+          placeholder="Enter Price"
+        />
+      </div>
+      <div class="input_style_left">
+        <input
+          type="text"
+          required
+          ngModel
+          name="url"
+          name="url"
+          class="input"
+          id="url"
+          placeholder="Enter URL"
+        />
+      </div>
+    </div>
+    <button class="btndd" type="submit">Add Product</button>
+  </form>
+</div>
